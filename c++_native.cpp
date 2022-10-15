@@ -16,8 +16,6 @@ using namespace std;
 
 void neighbors_update(Mat& array, int radius, int row_index, int column_index){
 
-    Vec3b pixelColor(255, 255, 255);
-
     for (int j = column_index - radius; j < column_index + 1 + radius; j++) {
         for (int i = row_index - radius; i < row_index + 1 + radius; i++) {
             if (i >= 0 && i < array.rows && j >= 0 and j < array.cols) {
@@ -89,6 +87,8 @@ int main()
     }
 
     destroyAllWindows();
+
+    imwrite("c++_native_res.jpg", img_dilate);
 
     excel.open("test.xls", fstream::app);
 

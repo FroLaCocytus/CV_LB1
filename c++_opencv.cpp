@@ -60,6 +60,8 @@ int main()
 
     destroyAllWindows();
 
+    imwrite("c++_opencv_res.jpg", img_dilate);
+
 
     excel.open("test.xls", fstream::app);
 
