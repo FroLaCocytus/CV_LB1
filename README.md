@@ -81,13 +81,22 @@ cv2.imshow('Dilatation kernel = (3,3)', cv2.resize (img_dilation3, dsize = (300,
 
 <h4>Результаты работы и сравнения системы</h4>
 
-Проведём дилатацию в трёх вариантах: Python openCV, Python native, C++ openCV, C++ native. В каждом из вариантов мы проведём по 30 тестов и выясним среднее время выполнения дилатации.
+Проведём дилатацию в трёх вариантах: Python openCV, Python native, C++ openCV, C++ native. Для того чтобы проверить, что все варианты дилатации на выходе получают одно и то же изображение, выполним операцию вычитания из варианта дилатации написанного на python opencv.
+
+<figure>
+  <p align="center"><img src="img_for_readme/correct.png"></p>
+  <figcaption align="center"><i>Проверка корректности реализаций дилатации</i></figcaption>
+</figure><br><br>
+
+После вычитания получаем полностью чёрные изображения, следовательно все изображения дилатации, выполненные разными способами, полностью идентичны.
+В каждом из вариантов мы проведём по 30 тестов и выясним среднее время выполнения дилатации.
 Ниже приведены графики отношения времени к номеру теста для каждого из вариантов.
 
 <figure>
   <p align="center"><img src="img_for_readme/test graph.png"></p>
   <figcaption align="center"><i>Время на выполнение дилатации</i></figcaption>
 </figure><br><br>
+
 
 <figure>
   <p align="center"><img src="img_for_readme/test gisto.png"></p>
